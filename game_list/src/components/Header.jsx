@@ -7,9 +7,10 @@ import { Themecolor } from '../context/Theme';
 
 
 const Header = () => {
-    const {toggle, setToggle} = useContext(Themecolor) ;
+    const {theme, setTheme} = useContext(Themecolor) ;
     function f(){
-        setToggle(!toggle)
+        // setToggle(!toggle)
+        {theme==='light'?setTheme('dark'):setTheme('light')}
     }
   return (
     <nav  className='fixed top-0 left-0 w-full ' >
@@ -23,7 +24,7 @@ const Header = () => {
              text-black font-bold h-10 ml-3 ' placeholder='  Search Games'/>
              
         </div>
-        {toggle?<LuSunMoon className='text-[35px] bg-slate-200 text-black p-1 rounded-full ml-5' onClick={f} />:
+        {theme==='dark'?<LuSunMoon className='text-[35px] bg-slate-200 text-black p-1 rounded-full ml-5' onClick={f} />:
         <IoMoonSharp className='text-[35px] bg-slate-200 text-black p-1 rounded-full ml-5' onClick={f}/>}
 
         
