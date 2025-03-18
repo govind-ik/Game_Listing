@@ -1,11 +1,13 @@
-import React, { useState } from 'react'
+import React, { useContext, useState,useEffect } from 'react'
 //import { CiSearch } from "react-icons/ci";
 import { FaSearch } from "react-icons/fa";
 import { LuSunMoon } from "react-icons/lu";
 import { IoMoonSharp } from "react-icons/io5";
+import { Themecolor } from '../context/Theme';
+
 
 const Header = () => {
-    const [toggle, setToggle] = useState(false) 
+    const {toggle, setToggle} = useContext(Themecolor) ;
     function f(){
         setToggle(!toggle)
     }
