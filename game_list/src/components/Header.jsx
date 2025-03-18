@@ -10,7 +10,7 @@ const Header = () => {
         setToggle(!toggle)
     }
   return (
-    <nav  className='fixed top-0 left-5' >
+    <nav  className='fixed top-0 left-0 w-full ' >
         <div className='flex items-center space-between'>
         <img  width={90} height={90}  className='mr-2'
         src='https://github.com/rrs301/game-listing-demo/blob/master/src/assets/Images/logo1.png?raw=true' ></img>

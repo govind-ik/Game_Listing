@@ -1,18 +1,23 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import Home from './pages/Home.jsx' 
+import Home from './pages/Home.jsx'
 import Header from './components/Header.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
-
+  
   return (
     <>
-    <Header/>
-     
+      {/* Full-page background */}
+      <div className="fixed inset-0 bg-gradient-to-br from-black to-gray-900 -z-10" />
       
+      {/* Main content */}
+      <div className="min-h-screen w-full flex flex-col relative">
+        <Header />
+        <div className="flex-grow pt-24">
+          
+        </div>
+      </div>
     </>
   )
 }
