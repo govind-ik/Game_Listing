@@ -8,9 +8,20 @@ import { Themecolor } from '../context/Theme';
 
 const Header = () => {
     const {theme, setTheme} = useContext(Themecolor) ;
+    useEffect(()=>{
+      const tt=localStorage.getItem('theme');
+      setTheme(tt);
+    })
     function f(){
         // setToggle(!toggle)
-        {theme==='light'?setTheme('dark'):setTheme('light')}
+        if(theme==='light'){
+          setTheme('dark');
+          localStorage.setItem('theme','dark');
+        }
+        else{
+          setTheme('light');
+          localStorage.setItem('theme','light');
+        }
     }
   return (
     <nav  className='fixed top-0 left-0 w-full ' >
