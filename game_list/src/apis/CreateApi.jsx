@@ -6,4 +6,8 @@ const axioscreate=axios.create({
     baseURL:'https://api.rawg.io/api'
 })
 
-const getgenre =await axioscreate.get('/genre?key'+key);
+const getgenre =  axioscreate.get(`/genres?key=${ key}`);
+
+export default{
+    getgenre
+}

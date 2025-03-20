@@ -27,6 +27,7 @@ function App() {
       <div className="min-h-screen w-full flex flex-col relative">
         <Header />
         <div className="flex-grow pt-24">
+          <Home/>
           
         </div>
       </div>
