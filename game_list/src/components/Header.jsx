@@ -24,8 +24,8 @@ const Header = () => {
         }
     }
   return (
-    <nav  className='fixed top-0 left-0 w-full ' >
-        <div className='flex items-center space-between'>
+    //<nav  className='fixed top-0 left-0 w-full ' >
+        <div className='flex items-center space-between mb-[-60px] mt-2'>
         <img  width={90} height={90}  className='mr-2'
         src='https://github.com/rrs301/game-listing-demo/blob/master/src/assets/Images/logo1.png?raw=true' ></img>
         
@@ -43,7 +43,7 @@ const Header = () => {
         
         </div>
 
-    </nav>
+   // </nav>
     
   )
 }
